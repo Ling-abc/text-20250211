@@ -6,15 +6,8 @@ use App\Http\Controllers\Controller;
 
 class UserAuthController extends Controller
 {
-    public function Login()
-    {
-        return 123;
-    }
-    public function Search($user_id)
-    {
-        return "你輸入的值:$user_id";
-    }
-    public function SignUp()
+
+    public function SignUpPage()
     {
         $binding =[
             'title' =>'註冊',
@@ -22,7 +15,22 @@ class UserAuthController extends Controller
         ];
         return view('auth.signup',$binding);
     }
+    public function SignUpProcess()
+    {
+        $input = request()->all();
+        print_r($input);
+        
+        if ($input['nickname'] == '') {
+            print('暱稱不得為空');
+            return redirect('/user/auth/signup')
+                ->withErrors(['暱稱不得為空']);
+            }
+
+
+    }
+  
 }
+
 
 
 

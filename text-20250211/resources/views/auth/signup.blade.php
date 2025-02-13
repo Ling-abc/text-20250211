@@ -15,7 +15,7 @@ Email： <input type="text" name="email" placeholder="Email" > <br>
 暱稱： <input type="text" name="nickname" placeholder="暱稱" > <br>
 使用者類型: <input type="radio" name="usertype" placeholder="user" >一般使用者
 <input type="radio" name="usertype" value='admin'> 管理員<br>
-<input type="text" value:"註冊" >
+<input type="submit" value:"註冊" >
 </form>
 
 @endsection 
