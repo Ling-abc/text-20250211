@@ -18,7 +18,7 @@ Route::get('/page1', function () {
 Route::get('/page2', function () {
     return 'page2';
 });
-
+// 你好
 // Route::get('/user/auth/login', 
 //             'App\Http\Controllers\UserAuthController@Login');
 
