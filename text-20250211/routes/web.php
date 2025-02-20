@@ -2,6 +2,17 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Middleware\AuthUserAdminMiddleware;
+// google登入
+Route::get(
+    '/google/auth',
+    'App\Http\Controllers\SocialiteController@redirectToProvider'
+);
+Route::get(
+    '/google/auth/callback',
+    'App\Http\Controllers\SocialiteController@handleProviderCallback'
+);
+
+
 
 Route::group(['prefix' => 'user'], function () {
     Route::group(['prefix' => 'auth'], function () {
